@@ -78,6 +78,7 @@ button:active {
     gap: 1rem;
     height: 100%;
     padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .img-container {
@@ -89,15 +90,16 @@ button:active {
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border: 4px solid #c29e00e8;
-    max-height: 160px;
+    max-height: 200px;
     max-width: 230px;
 }
 
 .single-item img {
     width: 100%;
     object-fit: fill;
-    height: 152px;
+    height: 192px;
     border-radius: 10px;
+    display: block;
 }
 
 .item-content {
@@ -130,4 +132,86 @@ button:active {
     color: #444;
     font-size: 1rem;
     line-height: 1.5;
+}
+
+@media screen and (max-width: 1500px) {
+    .menu-container {
+        width: 95%;
+    }
+
+    .single-item img {
+        width: 100%;
+        height: 152px;
+    }
+
+}
+
+@media screen and (max-width: 1350px) {
+    .img-container {
+        min-width: none;
+        width: 150px;
+        flex-basis: 0;
+    }
+
+    .single-item img {
+        min-width: none;
+        width: 142px;
+        height: 102px;
+    }
+
+    .item-header {
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .menu-container {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .single-item {
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .single-item img {
+        max-height: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .item-content {
+        width: 100%;
+    }
+
+    .item-header {
+        margin-bottom: 1rem;
+    }
+
+    .item-header h4, .item-header p {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.3rem 0.7rem;
+    }
 }
